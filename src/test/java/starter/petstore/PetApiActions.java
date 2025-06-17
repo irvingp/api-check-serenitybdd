@@ -33,12 +33,12 @@ public class PetApiActions extends UIInteractions {
 
     @Then("I get Kitty as result")
     public void thenISeeKittyAsResult() {
-        then().statusCode(400);
+        then().statusCode(200);
 
 
     }
     @Then("I get Cat as result")
-    public void thenISeeCat() {
+    public void thenISeeCatAsResult() {
         then().statusCode(200);
 
 
