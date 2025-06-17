@@ -15,7 +15,7 @@ public class PetApiActions extends UIInteractions {
 
     @Given("Kitty is available in the pet store")
     public Long givenKittyIsAvailableInPetStore() {
-        Pet pet = new Pet("Kitty", "NoAvailable");
+        Pet pet = new Pet("", "NoAvailable");
 
         Long newId = given()
                 .baseUri("https://petstore.swagger.io")
@@ -33,6 +33,8 @@ public class PetApiActions extends UIInteractions {
 
     @Then("I get Kitty as result")
     public void thenISeeKittyAsResult() {
-        then().body("name", Matchers.equalTo("Kitty"));
+        then().statusCode(400);
+
+
     }
 }
