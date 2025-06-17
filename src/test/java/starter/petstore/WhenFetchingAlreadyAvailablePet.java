@@ -14,4 +14,10 @@ public class WhenFetchingAlreadyAvailablePet {
         petApi.whenIAskForAPetWithId(newPetId);
         petApi.thenISeeKittyAsResult();
     }
+    @Test
+    public void fetchAlreadyAvailableCats() {
+        newPetId = petApi.givenKittyIsAvailableInPetStore();
+        petApi.whenIAskForAPetWithId(newPetId);
+        petApi.thenISeeCat();
+    }
 }

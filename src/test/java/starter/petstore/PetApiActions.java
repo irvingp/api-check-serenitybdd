@@ -37,4 +37,10 @@ public class PetApiActions extends UIInteractions {
 
 
     }
+    @Then("I get Cat as result")
+    public void thenISeeCat() {
+        then().statusCode(200);
+
+
+    }
 }
